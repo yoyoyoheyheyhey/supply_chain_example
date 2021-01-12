@@ -48,10 +48,10 @@ class App extends Component {
   handleSubmit = async() => {
     const { cost, itemName } = this.state;
     console.log(itemName, cost, this.itemManager);
-    let result = await this.ItemManager.methods.createItem(itemName, cost).send({ from: this.accounts[0] });
+    let result = await this.itemManager.methods.createItem(itemName, cost).send({ from: this.accounts[0] });
     console.log(result);
     alert(
-      `Send ${cost}Wei to ${+result.events.SupplyChainStep.returnValues._address}`
+      `Send ${cost}Wei to ${result.events.SupplyChainStep.returnValues._itemAddress}`
     );
   };
 
