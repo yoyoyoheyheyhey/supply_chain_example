@@ -1,7 +1,7 @@
 pragma solidity ^0.6.0;
 
 contract Ownable {
-    address payable _owner;
+    address public _owner;
     
     constructor() public {
         _owner = msg.sender;
