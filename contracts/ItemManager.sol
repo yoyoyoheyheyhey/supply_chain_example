@@ -20,7 +20,7 @@ contract ItemManager is Ownable {
     event SupplyChainStep(uint _itemIndex, uint _step, address _itemAddress);
     
     function createItem(string memory _identifier, uint _itemPrice) public onlyOwner {
-        Item item = new Item(this, _itemPrice, itemIndex);
+        Item item = new Item(this, _itemPrice, itemIndex); // every time a new smart contract is created, it gets address. that's why
         items[itemIndex]._item = item;
         items[itemIndex]._identifier = _identifier;
         items[itemIndex]._itemPrice = _itemPrice;
