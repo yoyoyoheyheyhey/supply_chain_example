@@ -28,6 +28,8 @@ $ npm install -g truffle
 ```
 $ cd client
 $ truffle develop
+
+truffle(develop)> migrate
 ```
 
 - Start the development server（open another terminal/powershell）
@@ -37,3 +39,4 @@ $ npm start
 ```
 
 ### loom
+https://www.loom.com/share/bddf94518b7f4d81a1dcdbd04ccecbc5
